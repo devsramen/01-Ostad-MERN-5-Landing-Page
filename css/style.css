@@ -280,7 +280,17 @@ li{
 /* Benefit Section Started */
 #benefit{
     padding: 20px 0;
-    border: 1px dotted red;
+    margin-top: 50px;
+}
+.benefitWrapper{
+    position: relative;
+}
+.benefitDecoration {
+    height: 170px;
+    width: auto;
+    position: absolute;
+    left: -115px;
+    top: -100px;
 }
 .benifit_SubTitle{
     font-size: 18px;
@@ -300,7 +310,7 @@ li{
 .cards{
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
-    gap: 5px;
+    gap: 30px;
 }
 .card{
     width: 100%;
@@ -311,9 +321,16 @@ li{
     -moz-border-radius: 0 0 10px 10px;
     -ms-border-radius: 0 0 10px 10px;
     -o-border-radius: 0 0 10px 10px;
+    position: relative;
 }
-.card:nth-child(1){
-    background-color: aqua;
+.card:nth-child(1)::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--theamColor);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .benifitCardHead i{
     width: 48px;
@@ -329,24 +346,194 @@ li{
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
+.card:nth-child(2) .benifitCardHead i{
+    background-color: #FF0069;
+}
+.card:nth-child(2)::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #FF0069;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card:nth-child(3) .benifitCardHead i{
+    background-color: #FFA800;
+}
+.card:nth-child(3)::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #FFA800;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card:nth-child(4) .benifitCardHead i{
+    background-color: #00FF47;
+}
+.card:nth-child(4)::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #00FF47;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .benifitCardBody{
     margin-top: 24px;
 }
 .benifitCardTitle{
     font-size: 18px;
     font-weight: 600;
+    text-transform: capitalize;
     margin-bottom: 14px;
 }
 .benifitCardDetails{
     font-size: 14px;
+    text-transform: capitalize;
     font-weight: 400;
+}
+/* Benefit Section Ended */
+
+/* About Us Section Started */
+#aboutUs{
+    padding-top: 150px;
+}
+.aboutUsWrapper{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+}
+.aboutUsImage{
+    position: relative;
+}
+
+.aboutUsImgWrapperRight_1{
+    width: 454px;
+    height: 506px;
+    border: 2px var(--theamColor);
+    border-style: dashed;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 1;
+    transform: rotate(-11deg);
+    -webkit-transform: rotate(-11deg);
+    -moz-transform: rotate(-11deg);
+    -ms-transform: rotate(-11deg);
+    -o-transform: rotate(-11deg);
+}
+.aboutUsImgWrapperRight_2{
+    width: 454px;
+    height: 506px;
+    background: #E8E6FF;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 2;
+}
+.aboutUsImgWrapperRight_3{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.aboutUsInfo{
+    margin-top: 50px;
+}
+.aboutUsSubTitle{
+    text-transform: capitalize;
+    color: var(--theamColor);
+    margin-bottom: 15px;
+}
+.aboutUsTitle{
+    font-size: 40px;
+    line-height: 1.5;
+}
+.aboutUsPara{
+    text-transform: capitalize;
+    margin: 30px 0;
+}
+#aboutUs .commonButton{
+    color: var(--theamColor);
+}
+#aboutUs .commonButton:hover{
+    color: #fff;
+}
+
+.aboutDesign{
+    position: relative;
+}
+.aboutDesignBox{
+    width: 330px;
+    height: 330px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.aboutDesignBoxImage{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+/* About Us Section Ended */
+
+/* Our Courses Section Started */
+#courses{
+    padding: 300px 0;
+}
+.coursesSubTitle{
+    text-align: center;
+    color: var(--theamColor);
+    
+}
+.coursesTitle{
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+    
+}
+.coursesPara{
+    text-align: center;
+    padding: 0 190px;
+
+}
+.coureseNameAndLogo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
 }
 
 
 
 
 
-/* Benefit Section Ended */
+/* Our Courses Section Ended */
 
 
 
