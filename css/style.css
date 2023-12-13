@@ -634,11 +634,11 @@ li{
     justify-content: center;
     align-items: flex-end;
     margin-top: 50px;
+    position: relative;
 }
 .sliderItem{
     width: 100%;
     height: 345px;
-    border: 1px dotted red;
     text-align: center;
 }
 .sliderItem.active{
@@ -701,9 +701,28 @@ li{
 .sliderItem:nth-child(2) i{
     font-size: 25px;
 }
+.arrows{
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.arrows i{
+    font-size: 25px;
+    cursor: pointer;
+}
 /* Our Testimonials Section Ended */
 
-/* Banner Section Started */
+/* Footer Section Started */
 #footer{
     background: #1F2937;
     padding-top: 100px;
@@ -711,7 +730,20 @@ li{
 .footerWrapper{
     position: relative;
 }
-/* .footerDesig{
-    position: ;
-} */
-/* Banner Section Ended */
+.footerDesig{
+    width: 105px;
+    height: 102px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+}
+.footerTop{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+/* Footer Section Ended */
